@@ -1,0 +1,120 @@
+repo=exp-blackhole-kerr-engine
+scenario=Blackhole Kerr Engine / Real Kerr engine
+url_search=?mode=real-kerr
+captured_at=2026-05-20T15:40:38.139Z
+browser=Chromium 147.0.7727.15
+headless=true
+meta_scenario=blackhole-kerr-engine-real-kerr-rawgpu-1
+status=success
+
+[page-console]
+(none)
+
+[harness-logs]
+./reports/logs/02-blackhole-kerr-engine-real-kerr.log
+
+[result-json]
+{
+  "meta": {
+    "repo": "exp-blackhole-kerr-engine",
+    "commit": "fa93fa8",
+    "timestamp": "2026-05-20T15:40:36.525Z",
+    "owner": "ai-webgpu-lab",
+    "track": "blackhole",
+    "scenario": "blackhole-kerr-engine-real-kerr-rawgpu-1",
+    "notes": "spin=0.82; inclinationDeg=67; cameraDistance=12; raySteps=128; geodesicRays=112; avgIntegrationMs=null; p95IntegrationMs=null; captured=undefined; escaped=undefined; backend=webgpu; fallback=false; realAdapter=kerr-rawgpu-1; automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:40:38.139Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "02-blackhole-kerr-engine-real-kerr",
+    "capture_url_search": "?mode=real-kerr"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "navigator.gpu available",
+      "required_features": [
+        "shader-f16",
+        "timestamp-query"
+      ],
+      "limits": {
+        "maxStorageBufferBindingSize": 134217728,
+        "maxBindGroups": 4
+      }
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "main",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "blackhole",
+    "name": "blackhole-kerr-engine-readiness",
+    "input_profile": "spin-0.82-inclination-67-geodesic-fixture",
+    "renderer": "kerr-geodesic-readiness",
+    "model_id": "kerr-geodesic-readiness",
+    "resolution": "960x540"
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 116.9,
+      "init_ms": 0.4,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "graphics": {
+      "avg_fps": 53333.33,
+      "p95_frametime_ms": 0.1,
+      "scene_load_ms": 0.4,
+      "resolution_scale": 0.74,
+      "ray_steps": 128,
+      "taa_enabled": true
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/02-blackhole-kerr-engine-real-kerr.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-blackhole-kerr-engine/",
+    "renderer_adapter": {
+      "id": "kerr-rawgpu-1",
+      "label": "Raw WebGPU Kerr geodesic compute (raw-webgpu-1)",
+      "status": "connected",
+      "isReal": true,
+      "version": "raw-webgpu-1",
+      "capabilities": [
+        "scene-load",
+        "frame-pace",
+        "real-render",
+        "compute-dispatch",
+        "geodesic-integration"
+      ],
+      "backendHint": "webgpu",
+      "message": "Real renderer adapter 'kerr-rawgpu-1' is connected."
+    },
+    "screenshots": [
+      "./reports/screenshots/02-blackhole-kerr-engine-real-kerr.png"
+    ]
+  }
+}
